@@ -214,6 +214,17 @@
                     "url": "git://github.com/mattdangerw/flatpak-xdg-open-shim"
                 }
             ]
+        },
+        {
+            "name": "nodejs",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://nodejs.org/dist/v7.7.3/node-v7.7.3.tar.xz",
+                    "path": "node.tar.xz",
+                    "sha256": "5441daf11f743b5508ddf31a16b4f268835fbceb59ef709b44e85b03fece0edf"
+                }
+            ]
         }
     ]
 }
