@@ -3,10 +3,10 @@ ARCH ?= $(shell flatpak --default-arch)
 REPO ?= repo
 
 all: build install-repo
-	flatpak update --user io.atom.electron.BaseApp
+	flatpak update --user io.atom.electron.BaseApp/${ARCH}/lts
 
 build: ${REPO} 
-	flatpak-builder --force-clean --ccache --require-changes --repo=${REPO} --arch=${ARCH} \
+	flatpak-builder --force-clean --ccache --repo=${REPO} --arch=${ARCH} \
 		--subject="build of io.atom.electron.BaseApp, `date`" \
 		${EXPORT_ARGS} build io.atom.electron.BaseApp.json
 
@@ -21,4 +21,4 @@ install-deps:
 
 install-repo:
 	flatpak --user remote-add --if-not-exists --no-gpg-verify nightly-electron ./repo
-	flatpak --user -v install nightly-electron io.atom.electron.BaseApp || true
+	flatpak --user -v install nightly-electron io.atom.electron.BaseApp/${ARCH}/lts || true

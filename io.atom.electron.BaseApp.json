@@ -3,6 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
     "runtime-version": "1.6",
+    "branch": "lts",
     "cleanup": [ "/cache",
                  "/include",
                  "/lib/pkgconfig",
@@ -220,9 +221,9 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://nodejs.org/dist/v7.9.0/node-v7.9.0.tar.xz",
+                    "url": "https://nodejs.org/dist/v6.10.2/node-v6.10.2.tar.xz",
                     "path": "node.tar.xz",
-                    "sha256": "a569764b884929f31a0772600a5cf36048ad42aa8c54ba4cabea6c067ef96a29"
+                    "sha256": "80aa11333da99813973a99646e2113c6be5b63f665c0731ed14ecb94cbe846b6"
                 }
             ]
         }
